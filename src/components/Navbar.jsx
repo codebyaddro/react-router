@@ -21,6 +21,9 @@ const Navbar = () => {
                 <li>
                     <NavLink className={({isActive}) => isActive ? 'text-red-500' : 'text-white'} to="/services">Services</NavLink>
                 </li>
+                <li>
+                    <NavLink className={({isActive}) => isActive ? 'text-red-500' : 'text-white'} to="/student">Student</NavLink>
+                </li>
             </ul>
         </div>
     )
