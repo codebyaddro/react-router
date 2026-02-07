@@ -7,6 +7,7 @@ import Contact from "../pages/Contact";
 import Services from "../pages/Services";
 import Student from "../pages/Student";
 import PageNotFound from "../pages/PageNotFound";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -35,7 +36,11 @@ export const router = createBrowserRouter([
         },
         {
             path: "/student",
-            element: <Student />,
+            element: (
+                <PrivateRoute>
+                    <Student />
+                </PrivateRoute>
+            ),
         },
         {
             path: "/student/:id",
